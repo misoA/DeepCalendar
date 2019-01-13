@@ -53,7 +53,7 @@ BUT, **★ STAR**를 클릭 하신 후 **깊은 달력** github를 clone or down
 3. 학습 방법
 4. 학습 테스트
 
-** 등록 **
+**등록**
 Reference : https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10
 
 - Object Detection (Faster RCNN)
@@ -61,7 +61,7 @@ Reference : https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-T
     2. 기존 미리 등록된 옷들은 이 과정을 통과함
 
 
-** Tagging **
+**Tagging**
 Reference : https://github.com/IllgamhoDuck/CVND/tree/master/%40PROJECT%20%5BImage%20Captioning%5D
 1. 옷 카테고리
 2. 날씨
@@ -69,7 +69,7 @@ Reference : https://github.com/IllgamhoDuck/CVND/tree/master/%40PROJECT%20%5BIma
 4. 온도
 5
 
-** 점수 매기기 ** (유저가 등록한 일정에 특정 옷이 얼마나 어울리는지 점수로 표시하는 방법)
+**점수 매기기** (유저가 등록한 일정에 특정 옷이 얼마나 어울리는지 점수로 표시하는 방법)
 예로 A, B라는 옷이 있다고 하자. A, B옷의 태깅은 다음과 같이 매겨졌다.
 
 
@@ -84,11 +84,11 @@ Reference : https://github.com/IllgamhoDuck/CVND/tree/master/%40PROJECT%20%5BIma
 날씨 뿐만 아니라 일정 카테고리별(여행, 비즈니스, 학교 등), 온도(예로 15도) 등을 고려하여 평가한다.
 
 
-** 추천 **
+**추천**
 - 옷 추천 알고리즘
 
 
-** 매칭 **
+**매칭**
 - 옷 매칭 찾아내기
 
 ## License
