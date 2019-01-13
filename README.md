@@ -23,17 +23,27 @@ _소스코드 업로드와 readme 수정을 진행중입니다
 
 ##### 1. Crawler
 ##### 2. Detection
-
+> 크롤러에서 수집한 이미지에서 상의(top)/하의(bottom)를 Object Detection(tensorflow-Faster RCNN), 잘라낸 이미지를 저장하여 이후 과정 학습에 사용함.
+> (ref : https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10)
 ##### 3. Classification
 ##### 4. Regression
 ##### 5. Recommendation
-
-##### 6. API
-
+> 고객의 일정/취향에 맞는 의상을 추천함 (User-based Collaboration-Filltering)  
+> 1. 고객의 일정 특성에 따라 의상을 필터링
+> 2. 의상별 사용자별 별점을 이용하여 사용자들의 취향 유사도를 계산함
+> 3. 유사도가 가장 높은 다른 사용자가 별점을 높게 준 의상을 추천함
+##### 6. API (Python Flask 기반의 API 서버)
+> [API List]
+> 1. S3download('fromfile', 'tofilename') : Image 서버의 자원을 로컬로 다운로드
+> 2. detectImage('detectImName') : 이미지 Detection 및 crop 하여 Image 서버에 저장 후 URL 반환
+> 3. ClassificateImage('imName') : 이미지를 의상 카테고리/일정 카테고리/날씨/온도에 따라 분류하여 태그 반환
+> 4. RecommendClothes : 추천 필요 일정을 확인 후, 일정별 추천 의상 매핑 
+> 5. matchImage('imTopName','imBottomName','imTopCode','imBottomCode') : 상의와 하의를 입력하여 매칭률을 반환
 ##### 7. Web
 ##### 8. DB
-##### 9. Static
-
+##### 9. Image Server
+> AWS S3를 이용하여 Static Image 서버 구축(https 이미지 호스팅)
+> AWS CLI를 각 서버에서 접근
 
 
 
@@ -66,13 +76,6 @@ BUT, **★ STAR**를 클릭 하신 후 **깊은 달력** github를 clone or down
 1. 추천 알고리즘에 의해 해당 유저의 취향 옷 1차 선별
 2. 선별된 옷 중 유저가 입력한 일정 정보에 적합한 옷 2차 선별
 3. 2차 선별을 통과한 옷 중에서 가장 어울리는 상의 하의 조합을 찾아내어서 추천
-
-**등록**
-Reference : https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10
-
-- Object Detection (Faster RCNN)
-    1. 유저가 새로 등록하는 옷에 적용
-    2. 기존 미리 등록된 옷들은 이 과정을 통과함
 
 
 **Tagging**
