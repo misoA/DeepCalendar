@@ -41,7 +41,6 @@ _소스코드 업로드와 readme 수정을 진행중입니다
 > 3. ClassificateImage('imName') : 이미지를 의상 카테고리/일정 카테고리/날씨/온도에 따라 분류하여 태그 반환
 > 4. RecommendClothes : 추천 필요 일정을 확인 후, 일정별 추천 의상 매핑 
 > 5. matchImage('imTopName','imBottomName','imTopCode','imBottomCode') : 상의와 하의를 입력하여 매칭률을 반환
-
 ##### 7. Web
 > Spring Framework 기반 웹서버 구축
 > 1. 사용자 등록, 로그인
