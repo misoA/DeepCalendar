@@ -45,8 +45,6 @@ _소스코드 업로드와 readme 수정을 진행중입니다
 > AWS S3를 이용하여 Static Image 서버 구축(https 이미지 호스팅)
 > AWS CLI를 각 서버에서 접근
 
-
-
 ## 어떻게 쓰나요?
 지금 당장은 사용하실 수 없습니다.
 BUT, **★ STAR**를 클릭 하신 후 **깊은 달력** github를 clone or download 하여 아래의 튜토리얼을 따라오신다면
