@@ -1,7 +1,9 @@
 # 깊은 달력 (a.k.a. Deep Calendar)
 
 ##### 사용자의 일정과 취향을 고려하여, 옷을 추천해주는 깊고 멋진 서비스
-삼성 인공지능 해커톤(https://research.samsung.com/aichallenge) 에 참여하여 진행한 프로젝트이며 최종 우승을 하였다. 추가적인 소스코드와 readme 수정은 차차 업로드할 예정
+삼성 인공지능 해커톤(https://research.samsung.com/aichallenge) 에 참여하여 진행한 프로젝트이며 최종 우승을 하였다. 추가적인 소스코드와 readme 수정은 차차 업로드할 예정    
+
+
 **주의** 
 _소스코드 업로드와 readme 수정을 진행중입니다
 완성본이 아닙니다_
