@@ -1,21 +1,10 @@
-# Deep Calendar API
+# Regression (회귀)
 
-##### Python Flask 기반의 API 서버
+옷의 이미지를 보고 옷에 관한 추가적인 정보를 regression을 통해서 얻어내고자 작성된 코드다. 모든 코드는 pytorch를 기반으로 작성되었으며 크게 다음의 두 가지 영역에서 각각 특정한 수치를 얻어낸다. 각 항목의 자세한 설명은 각 항목의 readme에 자세히 적혀져있다.
 
-## API List
-- S3download('fromfile', 'tofilename') : Image 서버의 자원을 로컬로 다운로드
-- detectImage('detectImName') : 이미지 Detection 및 crop 하여 Image 서버에 저장 후 URL 반환
-- ClassificateImage('imName') : 이미지를 의상 카테고리/일정 카테고리/날씨/온도에 따라 분류하여 태그 반환
-- RecommendClothes : 추천 필요 일정을 확인 후, 일정별 추천 의상 매핑 
-- matchImage('imTopName','imBottomName','imTopCode','imBottomCode') : 상의와 하의를 입력하여 매칭률을 반환
-  
-## API Environment
+1. 온도- 옷을 입기에 적합한 최저 온도 최고 온도에 관한 정보를 제공한다
+2. 매칭도 - 상의 / 하의 한 세트의 옷이 얼마나 어울리는지 점수로 제공한다
 
+여기서 사용된 코드는 `학습(train)`과 `테스트(inference)`를 위하여 만들어졌다. 딥러닝 모델을 테스트하고 성능을 측정하여서 성능이 가장 우수한 딥러닝 모델의 학습된 weight를 저장한 pickle 파일을 얻어내는 것을 목표로 한다.
 
-## How to get Data
-
-## Tutorial
-
-
-## License
-![main page](../bplogo.jpg)
+웹사이트에서 옷 사진을 여러 항목으로 분류하고 그 정보를 태깅하는 과정은 6_API폴더 내부에서 별도로 만들어져있다. API에서 사용되는 코드는 분류(Classification)과 회귀(Regression)파트에서 사용된 코드들을 모두 합쳐서 별도로 작성하여 사용하였다.
