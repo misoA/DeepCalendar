@@ -60,13 +60,16 @@
 > AWS S3를 이용하여 Static Image 서버 구축(https 이미지 호스팅)
 > AWS CLI를 각 서버에서 접근
 
+## 어떻게 사용하나요?
 
-
-
-1. 어떤 환경에서 써야하는지 (Dependencies)
-2. 어떤 경로를 통해서 어떤 명령어로 작동시켜야 하는지
-1) ``cd /path``
-
+### 1. 어떤 환경에서 써야하는지 (Dependencies)
+### 2. 프로젝트를 구동시키기 위한 과정
+> 프로젝트 각 칸 readme에 상세한 과정이 안내되어 있습니다.
+- Crawler를 통해 학습용 이미지 모으기
+- classifcation / regression 부분에서 deep learning model 학습시키기
+- API 동작시키기
+- DB 구성하기
+- AWS 웹서비스 동작시키기
 
 
 ## Appendix
@@ -95,8 +98,10 @@
 2. 선별된 옷 중 유저가 입력한 일정 정보에 적합한 옷 2차 선별
 3. 2차 선별을 통과한 옷 중에서 가장 어울리는 상의 하의 조합을 찾아내어서 추천
 
-### 기술 설명
+### 3. 기술 설명
 **Tagging**
+
+### 4. 서비스 아키텍쳐
 
 ## License
 ![main page](./bplogo.jpg)
