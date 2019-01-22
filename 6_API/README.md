@@ -10,11 +10,15 @@
 - `matchImage('imTopName','imBottomName','imTopCode','imBottomCode')` : 상의와 하의를 입력하여 매칭률을 반환
   
 ## API 서버 구조
-- `run.py` : API 서버 설정
-- `config.py` : DB 설정
-- `migrate.py` : DB Model 읽어오기 설정
-- `Model.py` : Model 정의
-- `app.py` : API URI 및 resource 정의 
+`run.py` : API 서버 설정
+
+`config.py` : DB 설정
+
+`migrate.py` : DB Model 읽어오기 설정
+
+`Model.py` : Model 정의
+
+`app.py` : API URI 및 resource 정의 
 
 ## 사용 방법
 - http 기반의 get/post 호출을 이용하여 API 서버 호출
