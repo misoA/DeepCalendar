@@ -14,12 +14,12 @@ Scikit Learn의 cosine_similarity를 이용하여 collaboration filtering을 구
 4. 추천을 진행할 고객과 유사한(신체사이즈 유사, 취향 유사) 고객 리스트 저장
 5. 유사 고객에 대하여 2,3과정 진행
 6. 고객 배열 생성 후 유사도 검증 (null 값의 경우 평균 저장)
-```
-consine_similarity = consine_similarity(유사고객,신규고객)
+    ```
+    consine_similarity = consine_similarity(유사고객,신규고객)
 
 
-유사도 점수 = 유사고객 점수배열 * consine_similarity
-```
+    유사도 점수 = 유사고객 점수배열 * consine_similarity
+    ```
 7. 유사도 높은 순서대로 상품 추천
 
 ## Tutorial
