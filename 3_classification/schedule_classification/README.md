@@ -82,8 +82,8 @@ Python data_generator.py
 ```
 위의 명령어 동작시 모든 것이 자동으로 이루어진다.
 
-`C:/deepc/dataset/raw_data/clothes`의 모든 이미지를
-`C:/deepc/dataset/preprocess_data/clothes`의 path로 복사하여 붙여넣는다.
+`C:/deepc/dataset/raw_data/schedule`의 모든 이미지를
+`C:/deepc/dataset/preprocess_data/schedule`의 path로 복사하여 붙여넣는다.
 이때 세부 항목을 별도로 분류하지 않고 한 폴더 안에 다 넣는다.
 
 라벨 생성은 다음과 같다.
