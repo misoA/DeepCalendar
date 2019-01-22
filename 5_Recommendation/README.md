@@ -5,7 +5,7 @@
  2. 의상별 사용자별 별점을 이용하여 사용자들의 취향 유사도를 계산함
  3. 유사도가 가장 높은 다른 사용자가 별점을 높게 준 의상을 추천함
   
-## Recommendation Algorithm
+## Recommendation 사용 기술
 Scikit Learn의 cosine_similarity를 이용하여 collaboration filtering을 구현함
 
 1. 추천을 진행할 고객 리스트 저장
@@ -22,7 +22,7 @@ Scikit Learn의 cosine_similarity를 이용하여 collaboration filtering을 구
     ```
 7. 유사도 높은 순서대로 상품 추천
 
-## Tutorial
+## 사용 방법
 
 추천을 진행하기 전, 이미지에 대한 [Detection](https://github.com/misoA/DeepCalendar/tree/master/2_detection)과 [Classification](https://github.com/misoA/DeepCalendar/tree/master/3_classification)/[Regression](https://github.com/misoA/DeepCalendar/tree/master/4_Regression)에 따른 Tagging이 선행되어야 함
 
