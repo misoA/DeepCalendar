@@ -92,11 +92,13 @@ Python data_generator.py
 최종 4개의 라벨 데이터가 생성된다.
 
 최고온도
+
 `temperature_max_train.json`
 
 `temperature_max_test.json`
 
 최저온도
+
 `temperature_min_train.json`
 
 `temperature_min_test.json`
