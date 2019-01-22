@@ -52,7 +52,7 @@ PC변수로 리스트 안의 path를 선택한다. 현재는 `PC=1`이므로 `C:
 각 점수를 하위 폴더명으로 만든다.
 여기서는 5가지 점수로 나뉘었다 `(0 / 0.2 / 0.5 / 0.8 / 1)`
 
-`C:/deepc/dataset/raw_data/match/2018-03-22/`
+`C:/deepc/dataset/raw_data/match/0/`
 
 옷 이미지를 해당하는 날짜 폴더 안에 각각 집어넣는다.
 
@@ -80,25 +80,16 @@ Python data_generator.py
 
 > `Annotation label_file data structure`
 >
-> [{'image': image_id(str), 'label', label(int)}]
+> [{'image_1': image_id(str), 'image_2': image_id(str), 'label', label(int)}]
 >
-> MAX(최고온도) Ex: [{'image': 'im_1' 'label': 27}]
->
-> MIN(최저온도) Ex: [{'image': 'im_1' 'label': 18}]
+> Ex: [{'image_1': 'im_1', 'image_2':'im_2', 'label': 1}]
 
-각 이미지마다 두 개의 dictionary를 만들어 이미지 이름과 최저 온도 최고 온도를 각각 저장한다.
+각 상하의 세트마다 dictionary를 만들어 `상의` `하의` 각 `이미지 이름`과 `점수`를 저장한다.
 이런 라벨 정보들은 한 곳에 모아져 학습용과 테스트용으로 나뉘어 저장된다.
-최종 4개의 라벨 데이터가 생성된다.
 
-최고온도
-`temperature_max_train.json`
+`match_train.json`
 
-`temperature_max_test.json`
-
-최저온도
-`temperature_min_train.json`
-
-`temperature_min_test.json`
+`match_test.json`
 
 ### 3. 학습
 
