@@ -1,9 +1,8 @@
-# Temperature Regression (온도 회귀)
+# Matching Regression (매칭 회귀)
 
 ## 개요
 
-옷의 이미지를 보고 옷의 온도를 알아맞히는 모델이다.
-옷을 입기에 알맞은 `최저 온도` / `최고 온도`에 대한 정보를 제공한다.
+`상의`와 `하의` 두 이미지를 입력받았을때 **패션의 관점에서 얼마나 어울리는지를 판단하는 모델**이다.
 
 ## 폴더 / 파일 설명
 
@@ -47,13 +46,13 @@ PC변수로 리스트 안의 path를 선택한다. 현재는 `PC=1`이므로 `C:
 
 여기에 어떤 종류의 딥러닝 모델인지 우측에 적어준다. 예시는 옷 종류 분류용 path 명이다.
 
-`C:/deepc/dataset/raw_data/temperature`
+`C:/deepc/dataset/raw_data/match`
 
-옷 이미지가 있다면 해당 옷을 입은 날짜를 하위 폴더명으로 만든다.
-옷 이미지는 인스타그램에서 크롤링한 이미지를 사용하였으며
-`날짜`는 **해당 옷 이미지가 올라온 날짜를 기준**으로 한다.
+얼마나 상의와 하의가 어울리는지 여부를 0부터 1까지 점수를 매겼고
+각 점수를 하위 폴더명으로 만든다.
+여기서는 5가지 점수로 나뉘었다 `(0 / 0.2 / 0.5 / 0.8 / 1)`
 
-`C:/deepc/dataset/raw_data/temperature/2018-03-22/`
+`C:/deepc/dataset/raw_data/match/2018-03-22/`
 
 옷 이미지를 해당하는 날짜 폴더 안에 각각 집어넣는다.
 
@@ -71,8 +70,8 @@ Python data_generator.py
 ```
 위의 명령어 동작시 모든 것이 자동으로 이루어진다.
 
-`C:/deepc/dataset/raw_data/temperature`의 모든 이미지를
-`C:/deepc/dataset/preprocess_data/temperature`의 path로 복사하여 붙여넣는다.
+`C:/deepc/dataset/raw_data/match`의 모든 이미지를
+`C:/deepc/dataset/preprocess_data/match`의 path로 복사하여 붙여넣는다.
 이때 세부 항목을 별도로 분류하지 않고 한 폴더 안에 다 넣는다.
 
 라벨은 `최고 온도`와 `최저 온도` 두 가지로 나누어 생성한다.
