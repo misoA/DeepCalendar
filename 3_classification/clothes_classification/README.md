@@ -35,8 +35,11 @@
 `Data_generator.py` - crawler로 모아진 raw image를 처리하여 학습용 이미지를 별도의 폴더에 저장하고 label을 생성한다. 
 
 `Data_loader.py` - 특정 이미지와 해당 이미지의 라벨 값을 돌려준다.
+
 `Inference.py` - 학습된 딥러닝 모델의 성능을 테스트
+
 `Model.py` - pytorch로 작성된 딥러닝 모델
+
 `Train.py` - 딥러닝 모델을 학습하는 곳
 
 ## 작동방법 
@@ -49,22 +52,29 @@
 PC = 1
 path_list = ["/jet/prs/workspace/fashion-cnn", "C:"]
 ```
+
 `Path_list`의 리스트 `좌측`은 aws ec2에서 설정된 path이며, `우측`은 local pc에서 설정한 기본 path다.
 PC변수로 리스트 안의 path를 선택한다. 현재는 `PC=1`이므로 `C:`가 선택되어있는 상태다.
 만약 `D:`폴더나 혹은 다른 path를 기본 path로 사용하고 싶다면 위의 `path_list`를 수정하면 된다.
 `Path_list` 중 하나의 path를 기본 path로 지정하고 여기에 `/deepc/dataset/raw_data/`를 붙여주면
 해당 path가 바로 학습용 데이터가 보관될 path다.
+
 `C:/deepc/dataset/raw_data/`
 
 여기에 어떤 종류의 딥러닝 모델인지 우측에 적어준다. 예시는 옷 종류 분류용 path 명이다.
+
 `C:/deepc/dataset/raw_data/clothes`
 
 옷 종류로 t-shirt를 생각하고 해당 이미지를 가지고 있다면 다음과 같은 폴더를 추가적으로 만든다.
+
 `C:/deepc/dataset/raw_data/clothes/t-shirt/`
 
 이후에 t-shirt이미지들을 위의 path에 집어넣으면 된다. 만약 옷 종류를 더 늘리고 싶다면
+
 `C:/deepc/dataset/raw_data/clothes/t-shirt/`
+
 `C:/deepc/dataset/raw_data/clothes/pants/`
+
 `C:/deepc/dataset/raw_data/clothes/coat/`
 
 등으로 폴더를 추가한후 학습용 이미지를 안에 넣어준다.
@@ -93,18 +103,22 @@ Python data_generator.py
 각 이미지마다 dictionary를 만들어 이미지 이름과 옷 종류에 따른 숫자를 부여한다.
 옷 종류에 부여되는 숫자는 해당 옷 종류가 `C:/deepc/dataset/raw_data/clothes/`에서
 몇 번째 폴더에 위치하는지에 따라 결정된다. 다음과 같은 순서로 폴더가 생성되었다 가정하자.
-
-`C:/deepc/dataset/raw_data/clothes/t-shirt`
-`C:/deepc/dataset/raw_data/clothes/pants`
-`C:/deepc/dataset/raw_data/clothes/coat`
+```
+C:/deepc/dataset/raw_data/clothes/t-shirt
+C:/deepc/dataset/raw_data/clothes/pants
+C:/deepc/dataset/raw_data/clothes/coat
+```
 
 `T-shirt`의 label은 `0`
+
 `Pants`의 label은 `1`
+
 `Coat`의 label은 `2` 
 
 와 같은 형태로 이루어진다. 이런 라벨 정보들은 한 곳에 모아져 학습용과 테스트용으로 나뉘어 저장된다.
 
 `clothes_train.json`
+
 `clothes_test.json`
 
 ### 3. 학습
