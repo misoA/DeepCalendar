@@ -78,7 +78,9 @@ C:/deepc/dataset/raw_data/clothes/coat/
 등으로 폴더를 추가한후 학습용 이미지를 안에 넣어준다.
 정리하자면 다음과 같다.
 
-`Path_list의 path/deepc/dataset/raw_data/딥러닝 모델 키워드/세부 항목/`
+```
+Path_list의 path/deepc/dataset/raw_data/딥러닝 모델 키워드/세부 항목/
+```
 
 설정한 path와 실제 컴퓨터에 이미지가 저장되어있는 path가 동일해야 한다.
 
