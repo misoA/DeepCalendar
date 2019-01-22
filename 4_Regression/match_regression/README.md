@@ -75,7 +75,9 @@ Python data_generator.py
 `C:/deepc/dataset/preprocess_data/temperature`의 path로 복사하여 붙여넣는다.
 이때 세부 항목을 별도로 분류하지 않고 한 폴더 안에 다 넣는다.
 
-라벨 생성은 다음과 같다.
+라벨은 `최고 온도`와 `최저 온도` 두 가지로 나누어 생성한다.
+온도는 [https://www.worldweatheronline.com/](https://www.worldweatheronline.com/) 사이트에서 제공하는 API를 사용하였다.
+`2018-12-03`와 같이 날짜를 입력하면 해당 날짜의 최저 온도와 최고 온도를 제공하여 준다.
 
 > `Annotation label_file data structure`
 >
