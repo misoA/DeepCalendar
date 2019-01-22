@@ -97,7 +97,9 @@ Python data_generator.py
 라벨 생성은 다음과 같다.
 
 > `Annotation label_file data structure`
+>
 > [{'image': image_id(str), 'label', label(int)}]
+>
 > Ex: [{'image': 'im_1' 'label': 1},
 
 각 이미지마다 dictionary를 만들어 이미지 이름과 옷 종류에 따른 숫자를 부여한다.
