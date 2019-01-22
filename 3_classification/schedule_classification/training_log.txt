@@ -1,0 +1,6 @@
+Epoch [1/30], Step [1/46], Loss: 2.1804
+Epoch [1/30], Step [2/46], Loss: 2.0274
+Epoch [1/30], Step [3/46], Loss: 2.0810
+Epoch [1/30], Step [4/46], Loss: 1.9436
+Epoch [1/30], Step [5/46], Loss: 1.8661
+Epoch [1/30], Step [6/46], Loss: 1.9898

@@ -1,0 +1,5 @@
+Epoch [1/30], Step [1/9], Loss: 0.2276
+Epoch [1/30], Step [2/9], Loss: 0.2032
+Epoch [1/30], Step [3/9], Loss: 0.1744
+Epoch [1/30], Step [4/9], Loss: 0.1705
+Epoch [1/30], Step [5/9], Loss: 0.1997
