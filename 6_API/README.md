@@ -23,8 +23,10 @@
 ## 사용 방법
 - http 기반의 get/post 호출을 이용하여 API 서버 호출
 - DB 및 Image 서버 구축 필요
-- 각 API 별 학습 방법은 상위 1~5 폴더 내용 참조
-- API의 사용 코드는 [상위 7_Web 폴더](https://github.com/misoA/DeepCalendar/tree/master/7_Web) 참조  
+
+`API 별 학습 방법` : 상위 1~5 폴더 내용 참조
+
+`API의 사용 코드` : [상위 7_Web 폴더](https://github.com/misoA/DeepCalendar/tree/master/7_Web) 참조  
 
 ## License
 ![main page](../bplogo.jpg)
