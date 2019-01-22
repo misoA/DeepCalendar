@@ -70,13 +70,11 @@ PC변수로 리스트 안의 path를 선택한다. 현재는 `PC=1`이므로 `C:
 `C:/deepc/dataset/raw_data/clothes/t-shirt/`
 
 이후에 t-shirt이미지들을 위의 path에 집어넣으면 된다. 만약 옷 종류를 더 늘리고 싶다면
-
-`C:/deepc/dataset/raw_data/clothes/t-shirt/`
-
-`C:/deepc/dataset/raw_data/clothes/pants/`
-
-`C:/deepc/dataset/raw_data/clothes/coat/`
-
+```
+C:/deepc/dataset/raw_data/clothes/t-shirt/
+C:/deepc/dataset/raw_data/clothes/pants/
+C:/deepc/dataset/raw_data/clothes/coat/
+```
 등으로 폴더를 추가한후 학습용 이미지를 안에 넣어준다.
 정리하자면 다음과 같다.
 
