@@ -67,10 +67,10 @@
 > 프로젝트 각 칸 readme에 상세한 과정이 안내되어 있습니다.
 - Crawler를 통해 학습용 이미지 모으기
 - classifcation / regression 부분에서 deep learning model 학습시키기
-- API 동작시키기
-- DB 구성하기
-- AWS 웹서비스 동작시키기
-
+- API 구성하기
+- flask 서버 및 DB 준비
+- frontend 웹사이트 준비
+- AWS에 서비스 올리기
 
 ## Appendix
 
