@@ -25,10 +25,15 @@
 >아래의 폴더 / 파일 구성은 딥러닝 모델 각각(옷 종류 / 일정 / 날씨) 에서 모두 동일하다.
 
 `Model` - 학습된 딥러닝 모델의 weight값이 담긴 pickle폴더를 epoch별로 저장해놓는 `폴더`
+
 `dataset` - 데이타셋을 만들기 위한 과정 중에 생성하는 중간 파일을 임시 보관하는 `폴더`
+
 `Configure.py` - train.py와 inference.py에서 해야될 핵심적인 설정값들을 종합해놓았다.
+
 `Data_analysis.py` - inference.py를 실행하여 나온 결과 파일을 분석한다.
+
 `Data_generator.py` - crawler로 모아진 raw image를 처리하여 학습용 이미지를 별도의 폴더에 저장하고 label을 생성한다. 
+
 `Data_loader.py` - 특정 이미지와 해당 이미지의 라벨 값을 돌려준다.
 `Inference.py` - 학습된 딥러닝 모델의 성능을 테스트
 `Model.py` - pytorch로 작성된 딥러닝 모델
