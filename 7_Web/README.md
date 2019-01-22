@@ -8,7 +8,9 @@ SpringFramework with Maven 기반 웹서버 구축
  4. 등록 후 API 서버에서 분석하여 추천 의상이 등록되며 일정 상세에서 확인가능
 
 ## Tutorial
-Spring with Maven 사용 가이드 (https://spring.io/guides/gs/maven/)
+
+### Spring with Maven 사용 가이드
+https://spring.io/guides/gs/maven/ 
 Spring 설정파일 경로 /BpCalendar/src/main/resources/config/spring
 properties 경로 /BpCalendar/src/main/resources/config/properties
 
