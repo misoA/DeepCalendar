@@ -18,6 +18,7 @@ TensorFlow `Mode Zoo`에서 `Faster-RCNN-Inception-V2-COCO` 모델을 다운로�
 ```
 python OBJECT_DETECTION_FOLDER_PWD/Object_detection_image.py
 ```
+_이 때 IMAGE_NAME 변수와 신규 이미지 파일 이름을 일치하도록 해야함_
 
 
 
