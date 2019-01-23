@@ -29,11 +29,21 @@
 ## 프로젝트 구성요소
 
 ##### 1. Crawler
+> 딥러닝 모델 학습용 이미지 모으기 
+> 1. 구글 검색 이미지
+> 2. 인스타그램 이미지
 ##### 2. Detection
 > 크롤러에서 수집한 이미지에서 상의(top)/하의(bottom)를 Object Detection(tensorflow-Faster RCNN), 잘라낸 이미지를 저장하여 이후 과정 학습에 사용함.
 > (ref : https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10)
 ##### 3. Classification
+> 옷의 이미지를 보고 옷을 세부 카테고리로 분류함
+> 1. 옷 종류 - T-shirt / pants / coat ..etc
+> 2. 일정 - daily / school / party ..etc
+> 3. 날씨 - sunny / rain / cloudy / snow
 ##### 4. Regression
+> 옷의 이미지를 보고 옷에 특정 점수를 부여함
+> 1. 온도 - 옷을 입기에 적합한 최저 온도 / 최고 온도 제공
+> 2. 매칭도 - 상의 / 하의 한 세트의 옷이 얼마나 어울리는지를 점수를 부여
 ##### 5. Recommendation
 > 고객의 일정/취향에 맞는 의상을 추천함 (User-based Collaboration-Filltering)  
 > 1. 고객의 일정 특성에 따라 의상을 필터링
