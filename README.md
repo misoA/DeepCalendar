@@ -73,6 +73,108 @@
 ## 어떻게 사용하나요?
 
 ### 1. 어떤 환경에서 써야하는지 (Dependencies)
+> !!!!!!경고!!!!!!! 매우 깁니다! 필요한 정보를 그때그때 찾아보시고 바로 다음으로 넘어가서 읽으시는 것을 권장드립니다!
+
+#### 리눅스 정보 확인
+   * 커널 : uname -a
+   * os version : cat /etc/*release*
+   * bit : getconf LONG_BIT
+
+#### 파이썬 정보 확인
+   * PIP 버전확인 : python3 -V
+   * PIP 설치
+      * apt-get update
+      * sudo apt-get install python3-pip
+   * PIP Upgrade : sudo pip install --upgrade pip
+
+#### 가상환경 설정
+   * virtualenv 설치 : pip3 install virtualenv
+   * python3.5 위치 확인 : which python3.5
+   * 가상환경 생성 : virtualenv -p 'which python3.5' 가상환경이름
+   * 가상환경 활성화 : source 가상환경이름/bin/activate 
+   * 가상환경 비활성화 : deactivate
+
+#### 라이브러리 설치 (in 가상환경)
+##### 기본
+   * sudo apt-get update
+   * sudo apt-get upgrade
+   * sudo apt-get dist-upgrade
+   * sudo apt-get autoremove
+
+##### cv2
+   * sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+   * sudo apt install python-opencv
+   * pip install opencv-python
+   * tensorflow-gpu 
+
+#### Adds NVIDIA package repository.
+   * sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+   * wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
+   * wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/nvidia-machine-learning-repo-ubuntu1604_1.0.0-1_amd64.deb
+   * sudo dpkg -i cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
+   * sudo dpkg -i nvidia-machine-learning-repo-ubuntu1604_1.0.0-1_amd64.deb
+   * sudo apt-get update
+
+> ##### Includes optional NCCL 2.x.
+   * sudo apt-get install cuda9.0 cuda-cublas-9-0 cuda-cufft-9-0 cuda-curand-9-0 \
+   * cuda-cusolver-9-0 cuda-cusparse-9-0 libcudnn7=7.1.4.18-1+cuda9.0 \
+   * libnccl2=2.2.13-1+cuda9.0 cuda-command-line-tools-9-0
+
+##### Optionally install TensorRT runtime, must be done after above cuda install.
+   * sudo apt-get update
+   * sudo apt-get install libnvinfer4=4.1.2-1+cuda9.0
+   * CUDA toolkit and Nvidia drivers
+   * sudo apt-get install linux-headers-$(uname -r)
+   * sudo apt-get install mesa-utils
+   * sudo dpkg -i ./cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
+   * sudo apt-get update
+   * sudo apt-get install cuda-9-1
+   * sudo apt-get autoremove
+   * reboot
+   * pip install --ignore-installed --upgrade tensorflow-gpu
+   * nvidia 스펙 확인 : nvidia-smi
+
+#### protobuf 설치
+   * sudo apt-get install autoconf automake libtool curl make g++ unzip
+   * git clone https://github.com/google/protobuf.git
+   * cd protobuf
+   * git submodule update --init --recursive
+   * ./autogen.sh
+   * ./configure
+   * make
+   * make check
+   * sudo make install
+   * sudo ldconfig # refresh shared library cache.
+
+`Numpy` : pip install numpy
+`pil` : pip install Pillow
+`scipy` : pip install scipy
+`sklearn` : pip install scikit-learn
+`lxml` : pip install lxml
+`Cython` : pip install Cython
+`matplotlib` : pip install matplotlib
+`pandas` : pip install pandas
+
+#### PATH 설정 (for ubuntu)
+   * export PYTHONPATH=/jet/prs/workspace/tensorflow1/models/research:$PYTHONPATH 
+   * export PYTHONPATH=/jet/prs/workspace/tensorflow1/models/research/slim:$PYTHONPATH 
+   * `(for rhel fedora)` : export PYTHONPATH="${PYTHONPATH}:/home/ubuntu/tensorflow1/models;${PYTHONPATH}:/home/ubuntu/tensorflow1/models/research;${PYTHONPATH}:/home/ubuntu/tensorflow1/models/research/slim"
+   * `(for windows)` :set PYTHONPATH=C:\tensorflow1\models;C:\tensorflow1\models\research;C:\tensorflow1\models\research\slim
+
+#### 실행
+   * python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config
+
+#### AWS CLI (https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/awscli-install-linux.html)
+   * sudo pip install awscli --upgrade --user
+   * aws --version
+   * aws configure
+
+#### AWS S3 CLI 명령어 (https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-s3.html)
+`s3 버킷 목록 조회` : aws s3 ls
+`s3 버킷 상세 조회` :  aws s3 ls s3://mybucket
+`s3 버킷 폴더 조회` :  aws s3 ls s3://mybucket/myfolder
+`업로드/다운로드` :  aws s3 cp from_folder to_folder --recursive
+
 ### 2. 프로젝트를 구동시키기 위한 과정
 > 프로젝트 각 칸 readme에 상세한 과정이 안내되어 있습니다.
 - Crawler를 통해 학습용 이미지 모으기
