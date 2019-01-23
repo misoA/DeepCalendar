@@ -177,12 +177,14 @@
 
 ### 2. 프로젝트를 구동시키기 위한 과정
 > 프로젝트 각 칸 readme에 상세한 과정이 안내되어 있습니다.
-- Crawler를 통해 학습용 이미지 모으기
-- classifcation / regression 부분에서 deep learning model 학습시키기
-- API 구성하기
-- flask 서버 및 DB 준비
-- frontend 웹사이트 준비
-- AWS에 서비스 올리기
+   1. 이미지 Data 수집 (Selenium을 이용한 Web Crawling)
+   2. Detection 분류기 학습을 위한 이미지의 레이블 생성
+   3. Object Detection Model 학습
+   4. Classification / Regression Model 학습
+   5. 의상 평점 Data 수집 (Web Crawling) 및 DB 저장
+   6. Recommendation Model 학습
+   7. API 서버 구축
+   8. Web 서버 구축
 
 ## Appendix
 
