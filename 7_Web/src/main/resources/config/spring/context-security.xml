@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 권한 적용하지 않음 -->
+	<security:http pattern="/resources/**" security="none" />
+	<security:http pattern="/**/*.jpg" security="none" />
+	<security:http pattern="/**/*.png" security="none" />
+
+	<security:http auto-config="true" create-session="never" use-expressions="true" disable-url-rewriting="true">
+
+		<security:headers disabled="true" />
+
+		<!-- 모든 권한 적용 -->
+		<security:intercept-url pattern="/login/**" access="permitAll" />
+		<security:intercept-url pattern="/data/**" access="permitAll" />
+
+		<!-- ROLE 지정 -->
+		<security:intercept-url pattern="/web/**" access="isAuthenticated()" />
+		<security:intercept-url pattern="/**" access="isAuthenticated()" />
+
+		<!-- 로그인 -->
+		<security:form-login username-parameter="id" password-parameter="password" login-page="/login/page"
+			login-processing-url="/login/login" default-target-url="/login/success" authentication-failure-url="/login/page"
+			always-use-default-target="false" />
+		<security:logout logout-url="/login/logout" logout-success-url="/" />
+
+		<!-- 세션 관리 -->
+		<security:session-management invalid-session-url="/">
+			<security:concurrency-control max-sessions="1" expired-url="/login/duplicate" />
+		</security:session-management>
+
+		<security:csrf />
+	</security:http>
+
+	<!-- User 정보 관리 -->
+	<security:authentication-manager>
+		<security:authentication-provider ref="customAuthenticationProvider" />
+	</security:authentication-manager>
+
+	<bean id="customAuthenticationProvider" class="com.blackpineapple.web.service.user.CustomAuthenticationProvider" />
+
+</beans>
