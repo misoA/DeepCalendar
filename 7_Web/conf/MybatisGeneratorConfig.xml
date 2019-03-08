@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!-- http://www.mybatis.org/generator/configreference/xmlconfig.html -->
+
+<generatorConfiguration>
+	<!-- 또는 클래스 패스로 jdbc드라이브가 지정 되어 있거나 [javahome]\jre\lib\ext 에 복사 되어 있어도 됨 export CLASSPATH=$CLASSPATH:/Users/hoyacom/Dev/javalibrary/sqljdbc-4.1.jar 
+		<classPathEntry location="../ams_env/javaLibs/sqljdbc-4.1.jar"/> CLASSPATH 환경변수에 Jar 패스 설정 <classPathEntry location="/Users/hoyacom/Dev/javalibrary/sqljdbc-4.2.jar"/> 
+		<classPathEntry location="/Users/hoyacom/Dev/javalibrary/mysql-connector-java-5.1.40-bin.jar" /> <classPathEntry location="C:/Users/lhb/.m2/repository/mysql/mysql-connector-java/5.1.40/mysql-connector-java-5.1.40.jar" 
+		/> <classPathEntry location="C:/Users/hoyac/Dev/JavaLibrary/mysql-connector-java-5.1.40-bin.jar" /> -->
+	<classPathEntry location="C:/Users/KKM/.m2/repository/mysql/mysql-connector-java/5.1.40/mysql-connector-java-5.1.40.jar" />
+
+	<context id="service" defaultModelType="conditional" targetRuntime="MyBatis3">
+
+		<!-- <plugin type="org.mybatis.generator.plugins.CachePlugin"> <property name="cache_eviction" value="LRU"/> <property 
+			name="cache_flushInterval" value="6000"/> <property name="cache_readOnly" value="true"/> <property name="cache_size" value="60"/> 
+			</plugin> -->
+
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin" />
+		<plugin type="org.mybatis.generator.plugins.VirtualPrimaryKeyPlugin" />
+		<!-- <plugin type="com.nbware.framework.mybatis.generator.plugin.liyiorg.MySQLPaginationPlugin" /> -->
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:{HOST}:{DB_PORT}/{DB_NAME}" userId="{USER_ID}"
+			password="{PASSWORD}" />
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetProject="BlackPineapple/src/main/java" targetPackage="com.blackpineapple.dao.generate.model">
+			<property name="enableSubPackages" value="false" />
+			<property name="trimStrings" value="true" />
+			<property name="constructorBased" value="false" />
+			<property name="rootClass" value="com.blackpineapple.dao.generate.model.BaseVo" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetProject="BlackPineapple/src/main/resources" targetPackage="mapper.generate" />
+
+		<javaClientGenerator type="XMLMAPPER" targetProject="BlackPineapple/src/main/java" targetPackage="com.blackpineapple.dao.generate.mapper">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+		<!-- generatedKey -->
+		<table tableName="BPRating" domainObjectName="BPRating">
+			<property name="useActualColumnNames" value="true" />
+			<generatedKey column="serialNo" sqlStatement="JDBC" />
+		</table>
+		<table tableName="Closet" domainObjectName="Closet">
+			<property name="useActualColumnNames" value="true" />
+			<generatedKey column="serialNo" sqlStatement="JDBC" />
+		</table>
+		<table tableName="RecommendGoods" domainObjectName="RecommendGoods">
+			<generatedKey column="serialNo" sqlStatement="JDBC" />
+		</table>
+		<table tableName="Calendar" domainObjectName="Calendar">
+			<property name="useActualColumnNames" value="true" />
+			<generatedKey column="calSerialNo" sqlStatement="JDBC" />			
+		</table>	
+		<!-- No generatedKey -->
+		<table tableName="BPCustomer" domainObjectName="BPCustomer">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="Brand" domainObjectName="Brand">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		<table tableName="Clothes" domainObjectName="Clothes">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="GoodsTag" domainObjectName="GoodsTag">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="WeatherCode" domainObjectName="WeatherCode">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		
+		
+	</context>
+</generatorConfiguration>
