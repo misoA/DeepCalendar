@@ -28,5 +28,3 @@
 
 `API의 사용 코드` : [상위 7_Web 폴더](https://github.com/misoA/DeepCalendar/tree/master/7_Web) 참조  
 
-## License
-![main page](../bplogo.jpg)
