@@ -21,8 +21,8 @@ python OBJECT_DETECTION_FOLDER_PWD/Object_detection_image.py
 _이 때 IMAGE_NAME 변수와 신규 이미지 파일 이름을 일치하도록 해야함_
 
 - `make_clothes_detect_forcf.py` : collaboration filltering(classification,regression 포함)을 위한 detection
-- `make_clothes_detect_matching.py` : matching을 위한 detection (상의, 하의 pair detecting)
-_사용 방법은 [API](../API) 참조_
+- `make_clothes_detect_matching.py` : matching을 위한 detection (상의, 하의 pair detecting)  
+_사용 방법은 [API](../6_API) 참조_
 
 
 
