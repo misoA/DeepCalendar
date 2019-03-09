@@ -27,6 +27,3 @@ Scikit Learn의 cosine_similarity를 이용하여 collaboration filtering을 구
 추천을 진행하기 전, 이미지에 대한 [Detection](https://github.com/misoA/DeepCalendar/tree/master/2_detection)과 [Classification](https://github.com/misoA/DeepCalendar/tree/master/3_classification)/[Regression](https://github.com/misoA/DeepCalendar/tree/master/4_Regression)에 따른 Tagging이 선행되어야 함
 
 
-## License
-![main page](../bplogo.jpg)
-
