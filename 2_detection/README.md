@@ -24,7 +24,3 @@ TensorFlow `Mode Zoo`에서 `Faster-RCNN-Inception-V2-COCO` 모델을 다운로�
     - `make_clothes_detect_matching.py` : matching을 위한 detection (상의, 하의 pair detecting)  
     _사용 방법은 [API](../6_API) 참조_
 
-
-## License
-![main page](../bplogo.jpg)
-
