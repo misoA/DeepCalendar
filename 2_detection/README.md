@@ -13,12 +13,16 @@ TensorFlow `Mode Zoo`에서 `Faster-RCNN-Inception-V2-COCO` 모델을 다운로�
 ## Tutorial
 아래의 github을 참조하여 Custom Object Detection 모델을 학습함  
 (ref : https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10)  
-학습 소스코드는 위의 링크를 참조  
+_학습 소스코드는 위의 링크를 참조_
 학습된 `frozen_inference_graph`와 `labelmap`을 이용하여 신규 이미지에 대해 Detection 실시  
 ```
 python OBJECT_DETECTION_FOLDER_PWD/Object_detection_image.py
 ```
 _이 때 IMAGE_NAME 변수와 신규 이미지 파일 이름을 일치하도록 해야함_
+
+- `make_clothes_detect_forcf.py` : collaboration filltering(classification,regression 포함)을 위한 detection
+- `make_clothes_detect_matching.py` : matching을 위한 detection (상의, 하의 pair detecting)
+_사용 방법은 [API](../API) 참조_
 
 
 
