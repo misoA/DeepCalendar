@@ -49,5 +49,3 @@ https://spring.io/guides/gs/maven/
 - DB 설정 
 - AWS S3 설정
 
-## License
-![main page](../bplogo.jpg)
